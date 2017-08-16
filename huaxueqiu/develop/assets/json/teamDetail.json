@@ -1,0 +1,56 @@
+{
+    "code": 1,
+    "message": "success",
+    "object": {
+    	"corpsId":1,
+        "corpsName":"红星车行战队",
+        "corpsImages":["./assets/img/test/King_banner_android@2x.png"],
+        "popularityNum":1134,
+		"custList": [
+			{
+				"custId": 56,
+				"custName": "大哈",
+				"custHead": "./assets/img/test/Head portrait.png",
+				"custHomePageId": 56,
+				"isCaptain": 1
+			},
+			{
+				"custId": 56,
+				"custName": "大哈",
+				"custHead": "./assets/img/test/Head portrait2.png",
+				"custHomePageId": 56,
+				"isCaptain": 0
+			},
+			{
+				"custId": 56,
+				"custName": "大哈",
+				"custHead": "./assets/img/test/Head portrait2.png",
+				"custHomePageId": 56,
+				"isCaptain": 0
+			},
+			{
+				"custId": 56,
+				"custName": "大哈",
+				"custHead": "./assets/img/test/Head portrait2.png",
+				"custHomePageId": 56,
+				"isCaptain": 0
+			},
+			{
+				"custId": 56,
+				"custName": "大哈",
+				"custHead": "./assets/img/test/Head portrait2.png",
+				"custHomePageId": 56,
+				"isCaptain": 0
+			}
+
+		]
+	},
+	"map":{
+        "shareInfo": {
+            "title": "感情深不深，红包见真情，赶紧约上哥们好友一起来领吧~",
+            "desc": "不玩虚的，领了就中现金！备胎红包领不停，不拼长相拼手气！",
+            "img": "待生成后给你",
+            "url": "待生成后给你"
+        }
+    }
+}

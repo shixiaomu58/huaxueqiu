@@ -1,0 +1,11 @@
+{
+    "code": 1,
+    "message": "成功!",
+    "object":
+    {
+        "turntableStatus": 1,
+        "isJoin": 0,
+        "prize": 0
+    },
+    "map":{}
+}

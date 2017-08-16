@@ -1,0 +1,193 @@
+<!-- <!DOCTYPE html> -->
+<!-- <html id="ng-app" ng-controller="GController">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Expires" content="-1">
+    <link href="http://static.cheok.com/ak/common/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="apple-touch-icon" href="http://static.cheok.com/ak/common/img/touch-icon/57.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="http://static.cheok.com/ak/common/img/touch-icon/57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="http://static.cheok.com/ak/common/img/touch-icon/72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="http://static.cheok.com/ak/common/img/touch-icon/114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="http://static.cheok.com/ak/common/img/touch-icon/144.png" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>滑小球</title>
+    <!-- <link href="./css/global.min.css?bust=20160428121" rel="stylesheet" /> -->
+    <link href="assets/css/huaxueqiu.min.css?bust=201604268121" rel="stylesheet" />
+<!-- </head> --> 
+
+<!-- <body>
+    <div id="pbody" ng-controller="mainController">
+        <div class="container">
+        </div>
+    </div>
+    <script>
+        /**
+         * 阻止默认事件
+         */
+        function forbidOverMove() {
+            window.ontouchmove = function(e) {
+                e.preventDefault && e.preventDefault();
+                e.returnValue = false;
+                e.stopPropagation && e.stopPropagation();
+                return false;
+            }
+        };
+        /**
+         * 获取移动坐标信息
+         */
+        function _fnGetTouchPosition(e) {
+            console.log("获取坐标",e.changedTouches)
+            var touches = e.changedTouches,
+                oMove = {
+                    x: e.pageX,
+                    y: e.pageY
+                }
+            ;
+            if(e.type.indexOf("touch") > -1){
+                oMove.x = touches[0].pageX;  //取第一个
+                oMove.y = touches[0].pageY;
+            }
+            alert(oMove);
+            return oMove;
+        }
+
+        function fn(){
+            this.container = document.getElementsByClassName('container')[0];
+            this.init();
+           
+        };
+        
+        fn.prototype = {
+            init: function(){
+                 forbidOverMove();
+                var _this = this;
+                 _this.bindTouch();
+            },   
+
+            //绑定触摸事件 
+            bindTouch: function() {
+                var _this = this;
+                var touchPosition, 
+                    isTouchStart = false;
+                function start(event) {
+                    console.log("开始",event);
+                    if (_this.moving) {
+                        return;
+                    }
+                    var oMove = _fnGetTouchPosition(event);
+                    touchPosition = oMove.y;
+                    isTouchStart = true;
+                };
+                function move(event) {
+                    forbidOverMove();
+                    console.log("滑动")
+                    if (_this.moving || !isTouchStart) {
+                        return;
+                    }
+                    var oMove = _fnGetTouchPosition(event);
+                    // 移动距离
+                    var touchMove = oMove.y - touchPosition;
+                }
+                function end(event) {
+                    event.preventDefault();
+                    if (_this.moving || !isTouchStart) {
+                        return;
+                    }
+                    var oMove = _fnGetTouchPosition(event);
+                    // 移动距离
+                    var touchMove = oMove.y - touchPosition;
+                    isTouchStart = false; 
+                }
+                //绑定
+                function bind() {
+                    if (window.attachEvent) {
+                        // attachEvent 用来给一个事件指派多个处理过程的
+                        // obj.attachEvent("on" + type, fn);
+                        _this.container.attachEvent("ontouchstart", function(e) { start(e); });
+                        _this.container.attachEvent("ontouchmove", function(e) { move(e); });
+                        _this.container.attachEvent("ontouchend", function(e) { end(e); });
+                        _this.container.attachEvent("onmousedown", function(e) { start(e);});
+                        _this.container.attachEvent("onmousemove", function(e) { move(e);});
+                        _this.container.attachEvent("onmouseup", function(e) { end(e);});
+                    } else if (window.addEventListener) {
+                        _this.container.addEventListener("touchstart", function(e) { start(e); }, false);
+                        _this.container.addEventListener("touchmove", function(e) { move(e); }, false);
+                        _this.container.addEventListener("touchend", function(e) { end(e); }, false);
+                        _this.container.addEventListener("mousedown", function(e) { start(e);}, false);
+                        _this.container.addEventListener("mousemove", function(e) { move(e);}, false);
+                        _this.container.addEventListener("mouseup", function(e) { end(e);}, false);
+                    }
+                }
+                bind();
+            }
+        };
+
+        new fn();
+
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <style>
+   body {
+    height: 2000px;
+   }
+   #block {
+    width:50px;
+    height:50px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+   }
+  </style>
+ </head>
+ <body>
+  <div id="block"></div>
+<script>
+  // 获取节点
+  var block = document.getElementById("block");
+  var oW,oH;
+  // 绑定touchstart事件
+  block.addEventListener("touchstart", function(e) {
+   console.log(e);
+   var touches = e.touches[0];
+   oW = touches.clientX - block.offsetLeft;
+   oH = touches.clientY - block.offsetTop;
+   //阻止页面的滑动默认事件
+   document.addEventListener("touchmove",defaultEvent,false);
+  },false)
+ 
+  block.addEventListener("touchmove", function(e) {
+   var touches = e.touches[0];
+   var oLeft = touches.clientX - oW;
+   var oTop = touches.clientY - oH;
+   if(oLeft < 0) {
+    oLeft = 0;
+   }else if(oLeft > document.documentElement.clientWidth - block.offsetWidth) {
+    oLeft = (document.documentElement.clientWidth - block.offsetWidth);
+   }
+   block.style.left = oLeft + "px";
+   block.style.top = oTop + "px";
+  },false);
+   
+  block.addEventListener("touchend",function() {
+   document.removeEventListener("touchmove",defaultEvent,false);
+  },false);
+  function defaultEvent(e) {
+   e.preventDefault();
+  }
+</script>
+ </body>
+</html>

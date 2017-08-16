@@ -1,0 +1,14 @@
+{
+    "code": 1,
+    "message": "成功!",
+    "object": {        
+		"seotitle":"页面SEO标题",
+		"apptitle":"页面SEO标题",
+		"seodesc":"页面SEO描述",
+		"appdesc":"页面SEO描述",
+		"seoimgUrl":"页面SEO图片地址",
+		"appimgUrl":"页面SEO图片地址",
+		"greatCarPlanID":2
+	},
+    "map": {}
+}

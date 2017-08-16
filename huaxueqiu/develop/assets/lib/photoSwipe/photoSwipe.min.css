@@ -1,0 +1,114 @@
+/**
+ * 手机端图片放大和切换
+ *
+ * @author xiaochai.dong@guanxin.com
+ * @since 2015-01-30
+ */
+/* .body-on-overlay{
+	position: fixed;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+    	>div{
+    		opacity: 0;
+    		&.photoSwipe-layer,
+    		&.photoSwiper-tmpContainer{
+    			opacity: 1;
+    		}
+    	}
+} */
+.photoSwipe-layer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9998;
+  background: #000;
+  width: 100%;
+  overflow: hidden;
+  font-size: 0;
+  /* 点 */
+}
+.photoSwipe-layer .item-box {
+  position: absolute;
+  top: 0;
+  list-style: none;
+  padding: 0;
+  display: table;
+}
+.photoSwipe-layer .item-box ul {
+  width: 100%;
+  height: 100%;
+}
+.photoSwipe-layer .item-box ul li {
+  height: 100%;
+  float: left;
+  display: block;
+  vertical-align: middle;
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+.photoSwipe-layer .item-box ul li.loading {
+  position: relative;
+}
+.photoSwipe-layer .item-box ul li.loading:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 999;
+  margin-left: -15px;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  background: url(loading.png) no-repeat;
+  background-size: 30px auto;
+  transform-origin: 50% 50%;
+  animation: kf-loading 1s linear infinite;
+}
+@keyframes kf-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.photoSwipe-layer .item-box ul li.loading img {
+  opacity: 0 !important;
+}
+.photoSwipe-layer .item-box ul li img {
+  position: absolute;
+  transition: all 0.2s ease-out;
+  border: 0 none;
+  /*margin: 0 auto;*/
+}
+.photoSwipe-layer .icon-box {
+  position: absolute;
+  font-size: 20px;
+  color: #fff;
+}
+.photoSwipe-layer .icon-box i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #FFF;
+  margin-right: 5px;
+}
+.photoSwipe-layer .icon-box i.current {
+  background: #484343;
+}
+.photoSwiper-tmpContainer {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  /*transition: background-color .5ms ease;*/
+}
+.photoSwiper-tmpContainer img {
+  position: absolute;
+}

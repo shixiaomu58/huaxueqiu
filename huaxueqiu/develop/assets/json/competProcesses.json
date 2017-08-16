@@ -1,0 +1,23 @@
+{
+    "code": 1,
+    "message": "成功!",
+    "object": {        
+		"activityStatus":0,
+		"matchImages":[
+			"./assets/img/test/time@2x.png"
+		],
+		"scheduleImages":[
+			"./assets/img/test/time@2x.png"
+		]
+	},
+    "map":
+    {
+        "shareInfo":
+        {
+            "title": "感情深不深，红包见真情，赶紧约上哥们好友一起来领吧~",
+            "desc": "不玩虚的，领了就中现金！备胎红包领不停，不拼长相拼手气！",
+            "img": "待生成后给你",
+            "url": "待生成后给你"
+        }
+    }
+}

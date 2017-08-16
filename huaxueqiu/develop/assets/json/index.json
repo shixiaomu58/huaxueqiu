@@ -1,0 +1,54 @@
+{
+    "code": 1,
+    "message": "success",
+    "object": {
+        "nextPlayTime": 1498832684765,
+        "now": 1498832684765,
+        "isBegin": true,
+        "actNo": 6,
+        "identity": 4,
+        "timeInterval": 100,
+        "probability": 0.4,
+        "luckyerVos":[{
+            "province": "杭州",
+            "name": "名字1",
+            "amount": "1000"
+        },{
+            "province": "杭州",
+            "name": "名字2",
+            "amount": "1000"
+        },{
+            "province": "杭州",
+            "name": "名字3",
+            "amount": "1000"
+        },{
+            "province": "杭州",
+            "name": "名字4",
+            "amount": "1000"
+        },{
+            "province": "杭州",
+            "name": "名字5",
+            "amount": "1000"
+        },{
+            "province": "杭州",
+            "name": "名字6",
+            "amount": "1000"
+        },{
+            "province": "杭州",
+            "name": "名字7",
+            "amount": "1000"
+        }]
+    },
+    "map": {
+        "isLogin": 1,
+        "isAuthentication": 1,
+        "isFinishHomePage": 1,
+        "isJoined": 0,
+		"shareInfo": {
+			"img":"",
+			"title":"",
+			"desc":"",
+			"url":""
+		}
+    }
+}

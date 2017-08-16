@@ -1,0 +1,38 @@
+{
+  "name": "app-carseller",
+  "version": "1.0.0",
+  "description": "车商端h5",
+  "license": "MIT",
+  "scripts": {
+    "sync": "browser-sync start --server \"develop\" --baseDir --directory true --files \"**/*\" --open \"external\" --port 2001",
+    "sync-build": "browser-sync start --server \"build\" --baseDir --directory true --files \"**/*\" --open \"external\" --port 20010"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.7",
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-compress": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-qunit": "latest",
+    "grunt-contrib-requirejs": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-string-replace": "latest",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-htmlmin": "^2.0.0",
+    "jpegtran-bin": "latest"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.7.7",
+    "express": "3.x",
+    "jpegtran-bin": "^2.0.2",
+    "precss": "^1.4.0"
+  },
+  "orignPath": "develop/",
+  "outPath": "build/"
+}

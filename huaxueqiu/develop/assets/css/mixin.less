@@ -1,0 +1,129 @@
+/**
+ *  通用混合集合 编写和使用需注释标识
+ *  @Name AshaLiu
+ *  @Date 2016-5-9
+ */
+
+
+/* 通用模块组件 */
+/* border 1px */
+.half-border(top, @border-color:#dcdedf){
+    &:after{
+        border-top-width: 1px !important;
+    }
+}
+.half-border(right, @border-color:#dcdedf){
+    &:after{
+        border-right-width: 1px !important;
+    }
+}
+.half-border(bottom, @border-color:#dcdedf){
+    &:after{
+        border-bottom-width: 1px !important;
+    }
+}
+.half-border(left, @border-color:#dcdedf){
+    &:after{
+        border-left-width: 1px !important;
+    }
+}
+.half-border(all, @border-color:#dcdedf, @border-radius:0px, @bg-color: transparent){
+    &:after{
+        border-width: 1px !important;
+    }
+}
+.half-border(@_, @border-color:#dcdedf, @border-radius:0px, @bg-color: transparent){
+    position: relative;
+    z-index: 1;
+    &:after{
+        z-index: -1;
+        box-sizing: border-box;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        height: 200%;
+        background-color: @bg-color;
+        transform: scale(0.5,0.5);
+        -webkit-transform: scale(0.5,0.5);
+        border-radius: @border-radius * 2;
+        border-style: solid;
+        border-color: @border-color;
+        border-width: 0 0 0 0;
+        transform-origin: top left;
+        -webkit-transform-origin: top left;
+    }
+}
+
+//清除浮动
+.ks-clear{
+    *zoom: 1;
+    &:after{
+        content: '\20';
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+//盒子布局
+.display-box(@orient: horizontal){
+    display: box;
+    display: -webkit-box;  
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -o-box;
+    -webkit-box-orient: @orient; 
+    -moz-box-orient: @orient;
+    -o-box-orient: @orient;
+    box-orient: @orient;
+}
+.compatibility-container {
+	.display-box();
+	width: 100%;
+}
+.box-flex(@flex: 1){
+    display: block;
+    box-flex: @flex;
+    -webkit-box-flex: @flex;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    -o-box-flex: 1;
+}
+.f-fl{
+    float:left;
+}
+.f-fr{
+    float:right;
+}
+/* 引用(维护先前的) */
+/* .half-top-border{
+    .half-border(top);
+}  
+.half-right-border{
+    .half-border(right);
+} 
+.half-bottom-border{
+    .half-border(bottom);
+} 
+.half-left-border{
+    .half-border(left);
+} 
+.half-border{
+    .half-border(all);
+}   */
+
+.text-align{
+	text-align: center;
+}
+/* 省略号 */
+.ellipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.px2rem(@name, @px){
+    @{name}: @px / 16 * 1rem;
+}

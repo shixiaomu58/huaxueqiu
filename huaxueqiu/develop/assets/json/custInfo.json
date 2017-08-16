@@ -1,0 +1,21 @@
+{
+    "code": 1,
+    "message": "成功!",
+    "object":
+    {
+        "isCertification": 1,
+        "isHomepageOver": 1,
+        "isJoinCorps": 0,
+        "joinCorpsID": 1
+    },
+    "map":
+    {
+        "shareInfo":
+        {
+            "title": "感情深不深，红包见真情，赶紧约上哥们好友一起来领吧~",
+            "desc": "不玩虚的，领了就中现金！备胎红包领不停，不拼长相拼手气！",
+            "img": "待生成后给你",
+            "url": "待生成后给你"
+        }
+    }
+}

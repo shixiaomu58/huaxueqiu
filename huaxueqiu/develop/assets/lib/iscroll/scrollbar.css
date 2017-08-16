@@ -1,0 +1,178 @@
+/**
+*  下拉刷新、滚动翻页样式
+*  SnoopyChen (ceo@vmeitime.com)
+*  2013-04-26
+*/
+
+/*------------- S 默认必须样式  -------------*/
+/**
+ *
+ * 下拉样式 Pull down styles
+ *
+ */
+/* 加载中顶部 */
+
+/**
+ *
+ * Pull down styles
+ *
+ */
+/*#pullDown, #pullUp {
+	height:45px;
+	line-height:45px;
+	padding:5px 10px;
+	font-size:14px;
+	color:#757575;
+	text-align: center;
+}
+#pullDown{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+#pullDown span, #pullUp span {
+	display:inline-block;
+	vertical-align: middle;
+}
+#pullDown .icon, #pullUp .icon  {
+	margin-right: 5px;
+	width:30px; height:40px;
+    background: url(refreshArrow.png) center center no-repeat;
+    background: -webkit-image-set(url(refreshArrow.png) 2x, url(refreshArrow@3x.png) 3x) center center no-repeat;  
+	-webkit-background-size:18px 40px; background-size:18px 40px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .icon {
+	-webkit-transform:rotate(180deg) translateZ(0);
+}
+#pullUp .icon  {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .icon {
+	-webkit-transform:rotate(360deg) translateZ(0);
+}
+
+#pullUp.flip .icon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown img,
+#pullDown span{
+	vertical-align: middle;
+}
+
+#pullDown.loading .icon,
+#pullDown img{
+	display: none;
+}
+#pullDown.loading img{
+	display: inline-block;
+	margin-right: 5px;
+}
+#pullDown.loading .icon, #pullUp.loading .icon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+
+
+#pullDown img{
+	width: 25px;
+	height: 25px;
+}
+#pullUp img{
+	width: 30px;
+	height: 30px;
+}*/
+/* 加载中底部 */
+/*------------- E 默认必须样式  -------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * 列表上拉下拉刷新
+ *
+ */
+#pullDown, #pullUp {
+	background:#fff;
+	height:40px;
+	line-height: 30px;
+	padding: 5px 0;
+	text-align: center;
+	/* border-bottom:1px solid #ccc; */
+	/*font-weight:bold;*/
+	font-size:14px;
+	color:#888;
+}
+#pullDown span,
+#pullUp span{
+	display: inline-block;
+	vertical-align: middle;
+}
+#pullDown .pullDownLabel, 
+#pullUp .pullUpLabel {
+	margin-left:5px;
+}
+#pullDown .pullDownIcon, 
+#pullUp .pullUpIcon {
+	/* float:left; */
+	width: 30px;
+	height: 30px;
+	background:url(pull-icon@2x.png) 0 0 no-repeat;
+	-webkit-background-size: 30px auto;
+	background-size: 30px auto;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;
+	/*margin-right: 5px;*/
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}

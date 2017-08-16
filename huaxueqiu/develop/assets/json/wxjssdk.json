@@ -1,0 +1,10 @@
+{
+    "code": 1,
+    "message": "成功!",
+    "object": {
+		"appId": "wxf8b4f85f3a794e77",
+		"timestamp": 1500962982,
+		"nonceStr": "gJLpAoVnkps8j5Jd",
+		"signature": "9d41baac9fc2d0db557b5aa4c7ef2f11980fcb8b"
+	}
+}

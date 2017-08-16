@@ -1,0 +1,42 @@
+  {
+      "code": 1,
+      "message": "成功!",
+      "object":
+      {
+          "corpsList": [
+            {
+                "corpsId": 1,
+                "corpsName": "红星车行战队",
+                "captainName": "王金平",
+                "popularityNum": 124
+            },
+            {
+                "corpsId": 1,
+                "corpsName": "红星车行战队",
+                "captainName": "王金平",
+                "popularityNum": 124
+            },
+            {
+                "corpsId": 1,
+                "corpsName": "红星车行战队",
+                "captainName": "王金平",
+                "popularityNum": 124
+            }
+          ],
+          "topTime": 11229974900000,
+          "corpsName": "红星车行战队",
+          "popularityNum": 11235,
+          "reward": "666"
+      },
+      "map":
+      {
+          "shareInfo":
+          {
+              "title": "感情深不深，红包见真情，赶紧约上哥们好友一起来领吧~",
+              "desc": "不玩虚的，领了就中现金！备胎红包领不停，不拼长相拼手气！",
+              "img": "待生成后给你",
+              "url": "待生成后给你"
+          }
+      },
+      "handelEntity": null
+  }

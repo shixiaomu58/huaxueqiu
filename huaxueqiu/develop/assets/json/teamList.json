@@ -1,0 +1,37 @@
+{
+    "code": 1,
+    "message": "success",
+    "object": {
+		"list": [
+			{
+				"teamId": "01",
+				"teamName": "大啦啦",
+				"teamhead": "大哈",
+				"popuCount": 150
+			},
+			{
+				"teamId": "02",
+				"teamName": "二啦啦",
+				"teamhead": "二哈",
+				"popuCount": 150
+			},
+			{
+				"teamId": "03",
+				"teamName": "三啦啦",
+				"teamhead": "三哈",
+				"popuCount": 150
+			}
+		],
+		"prevdate": 1500884618739,
+		"popuName": "啦啦啦啦",
+		"popuCount": 2500
+	},
+	"map":{
+        "shareInfo": {
+            "title": "感情深不深，红包见真情，赶紧约上哥们好友一起来领吧~",
+            "desc": "不玩虚的，领了就中现金！备胎红包领不停，不拼长相拼手气！",
+            "img": "待生成后给你",
+            "url": "待生成后给你"
+        }
+    }
+}
